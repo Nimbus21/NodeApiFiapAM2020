@@ -10,15 +10,17 @@ module.exports = {
      */
 
      await queryInterface.createTable('tb_hospital_clinica', {
-      cd_hospital_clinica: {
+      codigo: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
-        allowNull: false
+        allowNull: false,
+        field: 'cd_hospital_clinica'
       },
-      nr_cnpj: {
+      cnpj: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        field: 'nr_cnpj'
       },/*
       ds_endereco: {
         type: Sequelize.STRING,
@@ -32,9 +34,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },*/
-      nr_telefone: {
+      telefone: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        field: 'nr_telefone'
       },
       created_at: {
         type: Sequelize.DATE,
